@@ -1,9 +1,11 @@
 const express = require('express')
 const cors = require('cors')
 const app = express();
-const mongoose = require('mongoose')
-const UserModel = require('./models/Users')
+const mongoose = require('mongoose');
+const authRoutes = require("./Routes/AuthRoutes");
+const UserModel = require('./Models/UserModel')
 require("dotenv").config();
+const cookieParser = require("cookie-parser");
 
 
 app.listen(3001, () => {
@@ -25,11 +27,14 @@ app.use(cors({
     credentials: true
 }))
 
-
+app.use(cookieParser())
 app.use(express.json());
+app.use("/", authRoutes)
 
 
-
+app.get("/", function(req,res){
+    res.send("Server is running in browser");
+})
 
 app.get("/getUsers", (req, res) => {
     UserModel.find({}, (err, result) => {
