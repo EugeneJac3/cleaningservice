@@ -22,7 +22,7 @@ mongoose.connect(process.env.MongoURI, {
 })
 
 app.use(cors({
-    origin:["http:localhost:3000"],
+    origin:["http://localhost:3000"],
     method:["GET","POST"],
     credentials: true
 }))
