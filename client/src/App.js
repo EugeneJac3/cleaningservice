@@ -3,6 +3,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Login from './pages/Login';
 import Protected from './pages/Protected';
 import Register from './pages/Register';
+import "react-toastify/dist/ReactToastify.css"
 
 
 
