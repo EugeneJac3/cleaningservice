@@ -1,33 +1,58 @@
 import React, {useState} from 'react';
 import "../Auth.css";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {ToastContainer, toast} from 'react-toastify'
 import axios from 'axios';
 
 
-export default function Register(){
-    const {values, setValues} = useState({
+function Register(){
+    const navigate = useNavigate();
+    const [values, setValues] = useState({
         email:"",
         password:"",
     })
 
+    const generateError = (err) => toast.error(err,{
+        position:"bottom-right",
+    });
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         try{
-            const {data} = await axios.post("http://localhost:3001/register", {
+            const {data} = await axios.post(
+                "http://localhost:3001/register",
+            {
                 ...values,
+            },
+            {
+                withCredentials:true,
             })
+            console.log(data)
+            if(data){
+                if(data.errors){
+                    const {email,password} = data.errors;
+                    if(email) generateError(email);
+                    else if(password) generateError(password);
+                } else{
+                    navigate("/");
+                }
+            }
         } catch(err){
             console.log(err)
         }
     };
 
-    return <div className="container">
+    return ( 
+    
+        <div className="container">
         <h2>Register Account</h2>
         <form onSubmit={(e) => handleSubmit(e)}>
             <div>
                 <label htmlFor="email">Email</label>
-                <input type="email" name="email" placeholder="Email"
+                <input 
+                type="email"
+                name="email" 
+                placeholder="Email"
                 onChange={(e) =>
                 setValues({...values, [e.target.name]:e.target.value})
                 }
@@ -35,7 +60,10 @@ export default function Register(){
             </div>
             <div>
                 <label htmlFor="password">Password</label>
-                <input type="password" name="password" placeholder="Password"
+                <input 
+                type="password" 
+                name="password" 
+                placeholder="Password"
                 onChange={(e) =>
                     setValues({...values, [e.target.name]:e.target.value})
                     }
@@ -48,4 +76,7 @@ export default function Register(){
         </form>
         <ToastContainer/>
     </div>
+    );
 }
+
+export default Register
