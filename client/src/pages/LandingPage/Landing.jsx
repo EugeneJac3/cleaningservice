@@ -1,10 +1,18 @@
+import { Box, Stack } from '@mui/system'
 import React from 'react'
+import Services from './Services'
+import SignUp from './SignUp'
+import Welcome from './Welcome'
 
 const Landing = () => {
     return (
-       <div>
-           <h1>Welcome</h1>
-       </div>
+        <Box>
+        <Stack>
+            <Welcome/>
+            <Services/>
+            <SignUp/>
+        </Stack>
+      </Box>
     )
 }
 
