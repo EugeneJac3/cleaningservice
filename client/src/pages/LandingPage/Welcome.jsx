@@ -1,37 +1,36 @@
-import { Box } from '@mui/system'
+import { bgcolor, Box } from '@mui/system'
 import React from 'react'
-import groupClean from "../images/groupClean.jpg"
+import livingRoom from "../images/livingRoom.jpg"
+import heavenlyLogo from "../images/heavenlyLogo.png"
+import './Welcome.css';
 
 const Welcome = () => {
+
     return (
-        <Box
-        sx={{
+       
+
+        <div
+        className="backgroundDiv"
+         style={{
             
-            // border: "1px solid black",
-            backgroundImage: `url(${groupClean})`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             width: '100vw',
-            height: '100vh'
-
-
-        }}
-        >
-        <p
-
-        style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: ' center',
-            height: '80vh',
-            color:'white',
-            fontSize:'70px'
-
-        }}
-        >Welcome To Heavenly Cleaning</p>
+            height: '100vh',
+         }}
         
-      </Box>
+        >
+        <img 
+       className="logo"
+        src={heavenlyLogo}/>
+        <p
+        className="welcome"
+        
+        >House Cleaning Service in Huntsville, AL and Memphis, TN</p>
+        </div>
+
+   
     )
 }
 

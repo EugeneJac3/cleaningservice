@@ -6,6 +6,7 @@ import Protected from './pages/Protected';
 import Register from './pages/Register';
 import "react-toastify/dist/ReactToastify.css"
 import Landing from './pages/LandingPage/Landing';
+import './App.css';
 
 
 
@@ -19,7 +20,7 @@ function App() {
       <Route exact path="/login" element={<Login/>}/>
       <Route exact path="/protected" element={<Protected/>}/>
       </Routes>
-
+    
 
       
   );
