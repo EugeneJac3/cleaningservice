@@ -21,7 +21,7 @@ const modalStyle = {
   transform: 'translate(-50%, -50%)',
   width: 400,
   bgcolor: 'background.paper',
-  border: '2px solid #000',
+  border: '2px solid #d6caa9',
   boxShadow: 24,
   p: 4,
 }
@@ -50,45 +50,45 @@ const Services = () => {
     return (
       
         
-        <Box className="backgroundDiv2"
+        <Box className="backgroundDiv2">
         
-        sx={{
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            width: '100vw',
-            height: '100vh',
-
-           
-           
-            }}>
+       
 
 
         
 
 
-            <Grid container className="cardBox"
+            <Grid container className="cardBox" 
             sx={{
                 display: 'flex',
                 flexDirection: 'row',
                 alignItems: 'center',
                 justifyContent: 'space-evenly',
-
-                height:'100vh',
+                height: "100vh",
+                
+                
+                
+                
+                
+               
             }}
             >
-              <h1 className="service">Services</h1>
+             
+              <h1 className="service">Our Services</h1>
+              
 
               <Grid item component={Card}> 
                               <Card sx={{ 
                                 maxWidth: 345 ,
                                 borderStyle: "solid",
                                 borderWidth: 2,
+                                borderColor: "#d6caa9",
+                                
                                 }}>
                             <CardActionArea>
                               <CardMedia
                                 component="img"
-                                height="300"
+                                height="100%"
                                 image={cleaningWindow}
                                 alt="cleaningWindow"
                               />
@@ -96,6 +96,7 @@ const Services = () => {
                                 display: "flex",
                                 flexDirection: "column",
                                 alignItems: "center",
+                                
                               }}>
                                 <Typography gutterBottom variant="h5" component="div">
                                   Standard Cleaning
@@ -138,11 +139,12 @@ const Services = () => {
                               <Card sx={{
                                  maxWidth: 345,
                                  borderStyle: "solid",
-                                borderWidth: 2, }}>
+                                borderWidth: 2,
+                                borderColor: "#d6caa9", }}>
                             <CardActionArea>
                               <CardMedia
                                 component="img"
-                                height="300"
+                                height="100%"
                                 image={toilet}
                                 alt="green iguana"
                               />
@@ -196,11 +198,13 @@ const Services = () => {
                           <Card sx={{ 
                             maxWidth: 345,
                             borderStyle: "solid",
-                                borderWidth: 2, }}>
+                                borderWidth: 2,
+                                borderColor: "#d6caa9",
+                                 }}>
                             <CardActionArea>
                               <CardMedia
                                 component="img"
-                                height="300"
+                                height="100%"
                                 image={moving}
                                 alt="green iguana"
                               />

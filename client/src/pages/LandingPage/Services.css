@@ -1,7 +1,17 @@
-.backgroundDiv2 {
-    /* background: 
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Ultra&display=swap');
 
-    url(../images/makingBed.jpg); */
+.service {
+  display: flex;
+  font-family: 'Fugaz One', cursive;
+   height: 345px;
+  width: 349px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 50px;
+  border-radius: 5px;
+  box-shadow: 10px;
+  background-color:#d6caa9;
 
 }
 

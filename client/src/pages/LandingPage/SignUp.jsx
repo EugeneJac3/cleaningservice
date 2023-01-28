@@ -1,9 +1,23 @@
 import { Box } from '@mui/system'
 import React from 'react'
+import './SignUp.css';
 
 const SignUp = () => {
     return (
-        <Box>
+        <Box className="backgroundDiv3"
+        
+        sx={{
+            // backgroundPosition: 'center',
+            // backgroundSize: 'cover',
+            // backgroundRepeat: 'no-repeat',
+            width: '100%',
+            height: '100%',
+            
+            
+
+           
+           
+            }}>
             <div>SignUp</div>
         
       </Box>
