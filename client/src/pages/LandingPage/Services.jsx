@@ -50,7 +50,13 @@ const Services = () => {
     return (
       
         
-        <Box className="backgroundDiv2">
+        <Box className="backgroundDiv2"
+        sx={{
+          display: "flex",
+          minHeight: "100vh",
+         
+        }}
+        >
         
        
 
@@ -62,9 +68,11 @@ const Services = () => {
             sx={{
                 display: 'flex',
                 flexDirection: 'row',
+                rowGap:"30px",
                 alignItems: 'center',
                 justifyContent: 'space-evenly',
-                height: "100vh",
+                padding: "50px",
+                minHeight: "100vh",
                 
                 
                 
@@ -83,7 +91,6 @@ const Services = () => {
                                 borderStyle: "solid",
                                 borderWidth: 2,
                                 borderColor: "#d6caa9",
-                                
                                 }}>
                             <CardActionArea>
                               <CardMedia

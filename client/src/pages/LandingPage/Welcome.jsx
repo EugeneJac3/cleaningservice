@@ -24,10 +24,15 @@ const Welcome = () => {
         <img 
        className="logo"
         src={heavenlyLogo}/>
-        <p
-        className="welcome"
-        
-        >House Cleaning Service in Huntsville, AL and Memphis, TN</p>
+
+        {/* Place holder below */}
+        <div
+        className="welcome">
+
+            <div>House Cleaning Service</div>
+            <div> Huntsville, AL and Memphis, TN</div>
+         
+        </div>
         </div>
 
    
